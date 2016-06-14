@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function(params) {
 
-    var queryParams = params.zip.split(",");
+    var queryParams = params.type.split("/");
     var url;
     var type = queryParams[0];
     var zip = queryParams[1];

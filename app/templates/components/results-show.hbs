@@ -1,27 +1,28 @@
-<!-- {{#if legislatorsBoolean}} -->
-  test
-  <div class="legislatorsDiv">
-    {{#each model as |legislators|}}
-      <div>
-        {{legislators.first_name}} {{legislators.last_name}}
-        <br>
-        <p>{{legislators.phone}}</p>
-      </div>
-    {{/each}}
-  </div>
-<!-- {{/if}} -->
+{{type}}
+<div>
+  {{#each model as |legislators|}}
+    <div>
+      {{legislators.first_name}} {{legislators.last_name}}
+      <br>
+      <p>{{legislators.phone}}</p>
+    </div>
+  {{/each}}
+</div>
 
-{{#if committeesBoolean}}
-  test
-{{/if}}
+<div>
+  {{#each model as |committees|}}
+    <div>
+      {{committees.chamber}}
+      {{committees.parent_committee}}
+    </div>
+  {{/each}}
+</div>
 
-{{#if billsBoolean}}
-  test
-  <!-- <div class="billsDiv">
-    <select>
-      <option value="" {{action 'showAllBills'}}>Show All Bills</option>
-      <option value="" {{action 'showHouseBills'}}>House Bills</option>
-      <option value="" {{action 'showSenateBills'}}>Senate Bills</option>
-    </select>
-  </div> -->
-{{/if}}
+<div>
+  {{#each model as |bills|}}
+    <div>
+      {{bills.bill_id}}
+      {{bills.scheduled_at}}
+    </div>
+  {{/each}}
+</div>
