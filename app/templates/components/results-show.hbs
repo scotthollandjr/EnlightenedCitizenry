@@ -1,0 +1,42 @@
+<div>
+
+  <button class="btn btn-danger" {{action 'showLegislators'}}>legislators</button>
+  <button class="btn btn-danger" {{action 'showCommittees'}}>committees</button>
+  <button class="btn btn-danger" {{action 'showBills'}}>bills</button>
+  {{#link-to 'index' tagName="button" class="btn btn-info"}}New Search{{/link-to}}
+
+  <!-- <select onchange={{action target.value}}>
+    <option value={{showLegislators}}></option>
+    <option value={{showCommittees}}></option>
+    <option value={{showBills}}></option>
+  </select> -->
+
+{{#if legislatorsBoolean}}
+  <div class="legislatorsDiv">
+    {{#each model as |legislators|}}
+      <div>
+        {{legislators.first_name}} {{legislators.last_name}}
+        <br>
+        <p>{{legislators.phone_number}}</p>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
+
+{{#if committeesBoolean}}
+  <div class="committeesDiv">
+
+  </div>
+{{/if}}
+
+{{#if billsBoolean}}
+  <div class="billsDiv">
+    <select>
+      <option value="" {{action 'showAllBills'}}></option>
+      <option value="" {{action 'showHouseBills'}}></option>
+      <option value="" {{action 'showSenateBills'}}></option>
+    </select>
+  </div>
+{{/if}}
+
+</div>
