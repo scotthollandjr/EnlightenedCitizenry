@@ -1,17 +1,5 @@
-<div>
-
-  <button class="btn btn-danger" {{action 'showLegislators'}}>legislators</button>
-  <button class="btn btn-danger" {{action 'showCommittees'}}>committees</button>
-  <button class="btn btn-danger" {{action 'showBills'}}>bills</button>
-  {{#link-to 'index' tagName="button" class="btn btn-info"}}New Search{{/link-to}}
-
-  <!-- <select onchange={{action target.value}}>
-    <option value={{showLegislators}}></option>
-    <option value={{showCommittees}}></option>
-    <option value={{showBills}}></option>
-  </select> -->
-
-{{#if legislatorsBoolean}}
+<!-- {{#if legislatorsBoolean}} -->
+  test
   <div class="legislatorsDiv">
     {{#each model as |legislators|}}
       <div>
@@ -21,22 +9,19 @@
       </div>
     {{/each}}
   </div>
-{{/if}}
+<!-- {{/if}} -->
 
 {{#if committeesBoolean}}
-  <div class="committeesDiv">
-
-  </div>
+  test
 {{/if}}
 
 {{#if billsBoolean}}
-  <div class="billsDiv">
+  test
+  <!-- <div class="billsDiv">
     <select>
-      <option value="" {{action 'showAllBills'}}></option>
-      <option value="" {{action 'showHouseBills'}}></option>
-      <option value="" {{action 'showSenateBills'}}></option>
+      <option value="" {{action 'showAllBills'}}>Show All Bills</option>
+      <option value="" {{action 'showHouseBills'}}>House Bills</option>
+      <option value="" {{action 'showSenateBills'}}>Senate Bills</option>
     </select>
-  </div>
+  </div> -->
 {{/if}}
-
-</div>

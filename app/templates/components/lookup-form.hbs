@@ -1,11 +1,14 @@
-{{#if showZipForm}}
-  <div class="container">
-    <form>
-      <div class="form-group">
-        <label for="zip">Enter your zip code</label>
-        {{input value=zip id="zip"}}
-      </div>
-      <button class="btn btn-info" {{action 'inputZipButton'}}>Look Up</button>
-    </form>
+<form>
+  <div class="form-group">
+    <label for="zip">Enter your zip code</label>
+    {{input value=zip id="zip"}}
+
+    {{#x-select value=type id="type"}}
+      {{#x-option value="legislators"}}Legislators{{/x-option}}
+      {{#x-option value="committees"}}Committees{{/x-option}}
+      {{#x-option value="upcoming_bills"}}Bills{{/x-option}}
+    {{/x-select}}
   </div>
-{{/if}}
+
+  <button class="btn" {{action 'inputZipButton'}}>Submit</button>
+</form>

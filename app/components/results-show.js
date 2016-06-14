@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    legislatorsBoolean: true,
+    legislatorsBoolean: false,
     committeesBoolean: false,
     billsBoolean: false,
 
@@ -22,6 +22,6 @@ export default Ember.Component.extend({
         this.set('legislatorsBoolean', false);
         this.set('committeesBoolean', false);
         this.set('billsBoolean', true);
-      }
+      },
     }
 });
