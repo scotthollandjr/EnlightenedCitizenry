@@ -1,13 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    legislatorsBoolean: false,
+    legislatorsBoolean: true,
     committeesBoolean: false,
     billsBoolean: false,
 
     actions: {
       showLegislators() {
-        console.log('legislators');
         this.set('committeesBoolean', false);
         this.set('billsBoolean', false);
         this.set('legislatorsBoolean', true);
