@@ -1,7 +1,6 @@
 # Enlightened-citizenry
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Enlightened Citizenry app in ember for the Epicodus JavaScript course. Users can look up upcoming bills, senetors by zipcode, and other bill information via api calls. 
 
 ## Prerequisites
 
@@ -15,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/theAppanaut/EnlightenedCitizenry.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
